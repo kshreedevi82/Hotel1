@@ -1,0 +1,161 @@
+<html>
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+        }
+        .wrapper{
+            position: relative;
+            width:400px;
+            height: 450px;
+            background: transparent;
+            border: 2px solid aqua;
+           
+        } 
+        .wrapper .form-box{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color:black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .form-box::before{
+            content: '';
+            position: absolute;
+            width: 370px;
+            height: 450px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(60deg,transparent,aquamarine,aquamarine);
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+           
+        }
+        .form-box::after{
+            content: '';
+            position: absolute;
+            width: 370px;
+            height: 450px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(60deg,transparent,rgb(229, 17, 155),rgb(229, 17, 155));
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -3s;
+        }
+        @keyframes animate
+        {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform: rotate(360deg);
+            }
+        }
+        .form-box .input-box{
+            position: relative;
+            width: 100%;
+            height: 40px;
+            margin: 65px 0;
+        
+        }
+        .input-box input{
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            border: none;
+            color: purple;
+            align-items: center;
+            border-bottom: 2px solid aqua;
+           
+        }
+        .book{
+            color: bisque;
+            font-size: 20px;
+        }
+        .input-box label{
+            position: absolute;
+            top: 1%;
+            left: 0;
+            font-size: 16px;
+            color:bisque;
+            align-items: center;
+            pointer-events: none;
+            transform: translateY(-50%);
+        }
+        .btn{
+            width: 80%;
+            height: 45px;
+            background: transparent;
+            border: 2px solid aqua;
+            border-radius: 40px;
+            cursor: pointer;
+            color: antiquewhite;
+        }
+        .btn:hover{
+            background-color: aquamarine;
+            color: black;
+        }
+        form{
+            position: absolute;
+            inset: 2px;
+            border-radius: 20px 20px;
+            background: black;
+            z-index: 10;
+            padding: 30px 30px;
+        }
+        </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <div class="form-box">
+            <form action="	https://sheetdb.io/api/v1/fc1qzyw7kf0k8" method="post" id="sheetdb-form">
+                <div class="book">
+                <center> <h2>Book Table</h2></center></div>
+                <div class="input-box">
+                    <input type="text"  name="data[Name]" required>
+
+                    <label>Name</label>
+                </div>
+                <div class="input-box">
+                    <input type="tel" name="data[Phone]" required>
+                    <label>Contact Number</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+    </div>
+</div> 
+<script>
+    var form=document.getElementById('sheetdb-form');
+    form.addEventListener("submit",e => {
+        e.preventDefault();
+        fetch(form.action,{
+            method:"POST",
+            body:new FormData(document.getElementById("sheetdb-form"),)
+        }).then(
+            response => response.json()
+        ).then((html) => {
+            window.open('d.html','_blank');
+        });
+    });
+    </script>
+</body>
+</html>
+                

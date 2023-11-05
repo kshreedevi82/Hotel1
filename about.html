@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>about</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container{
+                padding: 3rem;
+                
+            }
+           
+            .slider{
+                width: 800px;
+                height: 500px;
+                overflow: hidden;
+              
+            }
+            .slides{
+                width: 500px;
+                height: 500px;
+                display: flex;
+            }
+            .slides input{
+                display: none;
+            }
+            .slide{
+                width: 200%;
+                transition: 2s;
+            }
+            .slide img{
+               width: 800px;
+               height: 500px;
+                
+            }
+            .manual-btn{
+               border: 2px solid deepskyblue;
+               padding: 5px;
+               border-radius: 10px;
+               cursor: pointer;
+               transition: 1s;
+            }
+            .navigation-manual{
+               position: absolute;
+               width: 800px;
+               margin-top: -40px;
+               display: flex;
+               justify-content: center;
+            }
+            .manual-btn:not(:last-child){
+                margin-right: 40px;
+            }
+            .manual-btn:hover{
+                background-color: deepskyblue;
+            }
+            #radio1:checked ~ .first{
+margin-left: 0;
+            }
+            #radio2:checked ~ .first{
+margin-left: -160%;
+            }
+            #radio3:checked ~ .first{
+margin-left: -320%;
+            }
+            #radio4:checked ~ .first{
+margin-left: -480%;
+            }
+            #radio5:checked ~ .first{
+margin-left: -640%;
+            }
+            #radio6:checked ~ .first{
+margin-left: -800%;
+            }
+            #radio7:checked ~ .first{
+margin-left: -960%;
+            }
+        </style>
+    </head>
+    <body bgcolor="lightblue" >
+            <div class="slider">
+                <div class="slides">
+                   <input type="radio" name="radio-btn" id="radio1">
+                   <input type="radio" name="radio-btn" id="radio2">
+                   <input type="radio" name="radio-btn" id="radio3">
+                   <input type="radio" name="radio-btn" id="radio4">
+                   <input type="radio" name="radio-btn" id="radio5">
+                   <input type="radio" name="radio-btn" id="radio6">
+                   <input type="radio" name="radio-btn" id="radio7">
+                   <div class="slide first">
+                    <img id=slide-1 src="image\a.jpg" alt="food"/>
+                   </div>
+
+                   <div class="slide ">
+                    <img id=slide-2 src="image\b.webp" alt="food"/>
+                   </div>
+                   <div class="slide ">
+                    <img id=slide-3 src="image\c.jpg" alt="food"/>
+                   </div>
+
+                   <div class="slide ">
+                    <img id=slide-4 src="image\d.jpg" alt="food"/>
+                   </div>
+                   <div class="slide ">
+                    <img id=slide-5 src="image\g.png" alt="food"/>
+                   </div>
+                   <div class="slide ">
+                    <img id=slide-6 src="image\h.jpg" alt="food"/>
+                   </div>
+                   <div class="slide">
+                    <img id=slide-7 src="image\i.jpg" alt="food"/>
+               
+                   </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                        <div class="auto-btn5"></div>
+                        <div class="auto-btn6"></div>
+                        <div class="auto-btn7"></div>
+                    </div>   
+                </div>
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                    <label for="radio6" class="manual-btn"></label>
+                    <label for="radio7" class="manual-btn"></label>
+                </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <center> 
+<i><b><u>About</u></b></i>
+    <p font style="color:crimson"><i>"Our chefs offer you  perfect cooking,best<br> served dishes with fresh ingredients and old <br>recipies.We have only carefully sourced  and<br> seasonal ingredients 
+        in our disposal<br> daily self-made bread,sourdough<br> pizza and many more."</i></p>
+        <img src="image\thinking-face.png" alt="food" width="200" height="200">
+</center></body>
+</html>
